@@ -1,4 +1,7 @@
+
+
 const gameBoard = (() => {
+
     const board = [
         ["", "", ""],
         ["", "", ""],
@@ -10,20 +13,31 @@ const gameBoard = (() => {
     };
 
     const setField = (x, y, sign) => {
-        board[x][y] = sign;    
+        board[x][y] = sign;
     };
 
+    const reset = () => {
+        for (let x = 0; x < 3; x++) {
+            for (let y = 0; y < 3; y++) {
+                board[x][y] = "";
+            }
+        }
+    }
 
-    return { getField, setField, board }
+    return { getField, setField, reset, board }
+})();
+
+const gameController = (() => {
+
+    return {}
 })();
 
 const displayController = (() => {
 
-
     const displayGameboard = () => {
         for (let x = 0; x < 3; x++) {
             for (let y = 0; y < 3; y++) {
-                console.log(gameBoard.getField(x,y));
+                console.log(gameBoard.getField(x, y));
             }
         }
     };
@@ -35,9 +49,4 @@ const displayController = (() => {
     return { displayGameboard, displayGameboardArray }
 })();
 
-const Player = (sign) => {
-    let
-}
-
-displayController.displayGameboard();
 displayController.displayGameboardArray();
