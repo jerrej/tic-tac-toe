@@ -1,4 +1,12 @@
+const playerFactory = (name, sign) => {
 
+    const getName  = () => name;
+    const getSign = () => sign;
+
+    const setName  = (input) => name;
+
+    return { getName, getSign};
+};
 
 const gameBoard = (() => {
 
@@ -50,3 +58,8 @@ const displayController = (() => {
 })();
 
 displayController.displayGameboardArray();
+const playerO = playerFactory("Jer","O");
+const playerX = playerFactory("Bot","X");
+console.log(playerO.getName() + " vs " + playerX.getName());
+playerO.name = "test";
+console.log(playerO.getName() + " vs " + playerX.getName());
