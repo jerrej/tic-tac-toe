@@ -93,11 +93,7 @@ gameController.makeMove(8);
 gameController.makeMove(1);
 gameController.makeMove(7);
 gameController.makeMove(3);
+console.log("CHECKING WIN " + gameController.checkWinner(0));
 gameController.makeMove(6);
-console.log("CHECKING" + gameController.checkWinner(0));
-console.log(gameBoard.getField(1))
-/*gameController.makeMove(4);
-gameController.makeMove(2);
-gameController.makeMove(5);
-gameController.makeMove(1);*/
+console.log("CHECKING WIN " + gameController.checkWinner(0));
 displayController.displayGameboardArray();
