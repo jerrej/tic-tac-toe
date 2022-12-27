@@ -49,7 +49,6 @@ const gameController = (() => {
         return moveCounter % 2 === 1 ? playerA : playerB;
     };
 
-
     const checkWinner = (fieldIndex) => {
         const winConditions = [
             [0, 1, 2],
